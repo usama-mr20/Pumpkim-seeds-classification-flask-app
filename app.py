@@ -1,5 +1,4 @@
 import json
-
 import numpy as np
 from flask import Flask, request, jsonify, render_template
 import pickle
@@ -10,7 +9,6 @@ flask_app = Flask(__name__)
 CORS(flask_app)
 
 model = pickle.load(open("svc_model.pkl", "rb"))
-model_columns = pickle.load(open("model_columns.pkl", "rb"))
 
 
 @flask_app.route("/")
